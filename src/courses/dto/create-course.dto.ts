@@ -1,4 +1,4 @@
-import { IsString, IsUUID, MinLength } from "class-validator";
+import { IsNumber, IsString, IsUUID, MinLength } from "class-validator";
 
 export class CreateCourseDto {
 
@@ -12,5 +12,9 @@ export class CreateCourseDto {
     @IsString()
     @MinLength(1)
     description:string;
+    
+    @IsNumber()
+    credits: number
+
 
 }

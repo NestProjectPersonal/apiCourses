@@ -21,5 +21,11 @@ export class Course extends Document {
     })
     description: string;
 
+    @Prop({
+        unique: true,
+        index: true,
+    })
+    credits: number;
+
 }
 export const CourseSchema = SchemaFactory.createForClass(Course);
